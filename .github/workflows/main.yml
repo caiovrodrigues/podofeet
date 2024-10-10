@@ -21,9 +21,9 @@ jobs:
       - name: Push para o servidor via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{secrets.server_ftp}}
-          username: ${{secrets.user_ftp}}
-          password: ${{secrets.password_ftp}}
+          server: ${{secrets.SERVER_FTP}}
+          username: ${{secrets.USER_FTP}}
+          password: ${{secrets.PASSWORD_FTP}}
           local-dir: ./dist/podofeet/browser/
           server-dir: ./
   
