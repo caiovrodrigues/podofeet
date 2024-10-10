@@ -19,11 +19,11 @@ jobs:
           npm install
           npm run build
       - name: Push para o servidor via FTP
-        uses: airvzxf/ftp-deployment-action@latest
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          ftpHostname: ${{secrets.server_ftp}}
-          ftpUsername: ${{secrets.user_ftp}}
-          ftpPassword: ${{secrets.password_ftp}}
-          src: ./dist/podofeet/browser
-          dest: /
+          server: ${{secrets.server_ftp}}
+          username: ${{secrets.user_ftp}}
+          password: ${{secrets.password_ftp}}
+          local-dir: ./dist/podofeet/browser
+          server-dir: ./
   
