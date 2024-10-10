@@ -24,7 +24,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: "ftp.espacopodofeet.com"
-          username: cd@espacopodofeet.com
+          username: sitebuilder@espacopodofeet.com
           password: ${{ secrets.ftp_password }}
           local-dir: dist/podofeet/browser/
           protocol: ftps
