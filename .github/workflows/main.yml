@@ -23,7 +23,7 @@ jobs:
       - name: Push para o servidor via FTP
         uses: akilaid/simple-ftp-deploy@v1.1.0
         with:
-          host: ftp.espacopodofeet.com
+          server: ftp.espacopodofeet.com
           username: cd@espacopodofeet.com
           password: ${{ secrets.ftp_password }}
-          localdir: dist/podofeet/browser/
+          local-dir: dist/podofeet/browser/
