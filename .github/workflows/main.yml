@@ -21,10 +21,9 @@ jobs:
       - name: List output files
         run: find dist/ -print
       - name: Push para o servidor via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: akilaid/simple-ftp-deploy@v1.1.0
         with:
-          server: ftp.espacopodofeet.com
+          host: ftp.espacopodofeet.com
           username: cd@espacopodofeet.com
           password: ${{ secrets.ftp_password }}
-          local-dir: dist/podofeet/browser/
-  
+          localdir: dist/podofeet/browser/
