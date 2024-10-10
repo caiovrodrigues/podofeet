@@ -21,7 +21,7 @@ jobs:
       - name: List output files
         run: find dist/ -print
       - name: Push para o servidor via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.3
+        uses: SamKirkland/FTP-Deploy-Action@v4.0.0
         with:
           server: ftp.espacopodofeet.com
           username: sitebuilder@espacopodofeet.com
