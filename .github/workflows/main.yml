@@ -19,11 +19,11 @@ jobs:
           npm install
           npm run build
       - name: Push para o servidor via FTP
-        uses: anvil-solutions/Fast-FTP-Action@2.1.3
+        uses: sebastianpopp/ftp-action@v2.0.0
         with:
-          server: ${{secrets.server_ftp}}
-          username: ${{secrets.user_ftp}}
+          host: ${{secrets.server_ftp}}
+          user: ${{secrets.user_ftp}}
           password: ${{secrets.password_ftp}}
-          local_dir: ./dist/podofeet/browser
-          remote_dir: .
+          localDir: ./dist/podofeet/browser
+          remoteDir: .
   
