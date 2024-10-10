@@ -21,9 +21,10 @@ jobs:
       - name: List output files
         run: find dist/ -print
       - name: Push para o servidor via FTP
-        uses: sebastianpopp/git-ftp-action@3.0.0
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          url: "ftp.espacopodofeet.com"
-          user: cd@espacopodofeet.com
+          server: "ftp.espacopodofeet.com"
+          username: cd@espacopodofeet.com
           password: ${{ secrets.ftp_password }}
-          syncroot: dist/podofeet/browser/
+          local-dir: dist/podofeet/browser/
+          protocol: ftps
