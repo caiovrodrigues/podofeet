@@ -24,6 +24,6 @@ jobs:
           server: ${{secrets.server_ftp}}
           username: ${{secrets.user_ftp}}
           password: ${{secrets.password_ftp}}
-          local-dir: ./dist/podofeet/browser
+          local-dir: ./dist/podofeet/browser/
           server-dir: ./
   
