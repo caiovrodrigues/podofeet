@@ -21,9 +21,9 @@ jobs:
       - name: Push para o servidor via FTP
         uses: modern-dev/ftp-mirror@v2
         with:
-          server: ${{secrets.server-ftp}}
-          user: ${{secrets.user-ftp}}
-          password: ${{secrets.password-ftp}}
+          server: ${{secrets.server_ftp}}
+          user: ${{secrets.user_ftp}}
+          password: ${{secrets.password_ftp}}
           local_dir: ./dist/podofeet/browser
           remote_dir: ./
   
