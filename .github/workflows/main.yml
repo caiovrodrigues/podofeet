@@ -27,4 +27,4 @@ jobs:
           username: cd@espacopodofeet.com
           password: ${{ secrets.ftp_password }}
           local-dir: dist/podofeet/browser/
-          protocol: ftps
+          protocol: sftp
