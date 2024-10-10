@@ -18,6 +18,8 @@ jobs:
         run: |
           npm install
           npm run build
+      - name: List output files
+        run: find dist/ -print
       - name: Push para o servidor via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
