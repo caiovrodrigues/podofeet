@@ -1,0 +1,26 @@
+<div class="container mx-auto md:w-8/12 px-6 lg:px-0">
+    <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+        <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+    </div>
+    @if(post){
+        <article>
+            <h2 class="text-xl md:text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl md:w-2/4 mx-auto text-center ">{{post.title}}</h2>
+            <p class="mt-2 text-sm md:text-lg leading-6 text-gray-600">{{post.descricaoTitle}}</p>
+    
+            @for(bloco of post.blocos; track bloco.title){
+                <h3 class="mt-3 text-xl md:text-xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{bloco.title}}</h3>
+                @if(bloco.descricao.length != 0){<p class="mt-2 text-sm md:text-lg leading-6 text-gray-600">{{bloco.descricao}}</p>}
+                @if(bloco.lista != null){
+                    <ul class="list-disc">
+                    @for(item of bloco.lista; track item.title){
+                            <li class="ml-4 md:ml-8 mt-2 text-sm md:text-lg leading-6 text-gray-600"><strong>{{item.title}}</strong> {{item.descricao}}</li>
+                    }
+                    </ul>
+                }
+            }
+        </article>
+    }@else {
+        <p>Erro ao buscar post...</p>
+    }
+    
+</div>

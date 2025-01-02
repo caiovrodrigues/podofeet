@@ -1,0 +1,83 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+  }
+  
+  .header .logo h1 {
+    background-image: linear-gradient(43deg, rgb(128, 186, 199) 0%, rgb(128, 186, 199) 46%, rgb(128, 186, 199) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  
+  .header nav ul {
+    display: flex;
+  }
+  
+  .header nav ul li a {
+    padding: 10px 25px;
+    color: #555555;
+    border-radius: 10px;
+    transition: 0.4s ease;
+  }
+  
+  .header nav ul li a:hover {
+    background-color: rgb(128, 186, 199);
+    color: #fff;
+    border-radius: 7px;
+  }
+  
+  .header .menu-hamburguer {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .header .menu-hamburguer .line {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(128, 186, 199);
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+  }
+  
+  .header-content .header-content-left {
+    flex: 1;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .header-content .header-content-left h1 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: #2c2c2c;
+    margin-bottom: 15px;
+  }
+  
+  .header-content .header-content-left p {
+    color: #555555;
+    margin-bottom: 15px;
+  }
+  
+  .header-content .header-content-right {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+  }
+  
+  .header-content .header-content-right img {
+    max-width: 450px;
+    width: 100%;
+    filter: drop-shadow(-25px -5px 40px rgba(128, 186, 199, 0.5));
+  }
