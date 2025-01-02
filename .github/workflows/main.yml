@@ -1,0 +1,30 @@
+name: CI-CD
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  CI-CD:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pega o repositório atualizado
+        uses: actions/checkout@v4.2.1
+      - name: Instala o node
+        uses: actions/setup-node@v4.0.4
+        with:
+          node-version: v20.11.1
+      - name: Build
+        run: |
+          npm install
+          npm run build
+      - name: List output files
+        run: find dist/ -print
+      - name: Push para o servidor via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: "	br532.hostgator.com.br"
+          username: cd@espacopodofeet.com
+          password: ${{ secrets.ftp_password }}
+          local-dir: dist/podofeet/browser/
+          protocol: ftp
