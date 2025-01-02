@@ -2,3 +2,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.wrapper{
+    scroll-snap-type: x mandatory;
+
+    .card{
+        scroll-snap-align: center;
+    }
+}

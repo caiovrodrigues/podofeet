@@ -1,5 +1,4 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { NgClass } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { EmailService } from '../../services/email.service';
@@ -8,7 +7,7 @@ import { EmailService } from '../../services/email.service';
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [ReactiveFormsModule, FormsModule, NgClass],
+  imports: [ReactiveFormsModule, FormsModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
   animations: [

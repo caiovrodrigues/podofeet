@@ -3,9 +3,9 @@
     <div class="absolute inset-x-0 -top-40 -z-30 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
         <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
     </div>
-    <div class="flex gap-5 overflow-auto [&::-webkit-scrollbar]:hidden pt-5 pb-6">
+    <div class="flex gap-5 overflow-auto [&::-webkit-scrollbar]:hidden pt-5 pb-6 pr-6 wrapper">
         @for (depoimento of depoimentos; track depoimento.id) {
-            <div class="min-w-[250px] w-full p-5 isolate rounded-xl bg-white/20 shadow-lg ring-1 ring-black/5 backdrop-blur-3x1">
+            <div class="min-w-[250px] w-full p-5 isolate rounded-xl bg-white/20 shadow-lg ring-1 ring-black/5 backdrop-blur-3x1 card">
                 <div class="flex gap-2 items-center">
                     <img [ngSrc]="'assets/woman-' + depoimento.id + '.webp'" width="50" height="50" alt="">
                     <p>{{depoimento.name}}</p>
