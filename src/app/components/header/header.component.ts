@@ -1,5 +1,5 @@
-import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component } from '@angular/core';
+import { animate, style, transition, trigger } from '@angular/animations';
+import { Component, inject, PLATFORM_ID } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -21,8 +21,18 @@ import { RouterLink } from '@angular/router';
     ])
   ]
 })
-export class HeaderComponent {
+export class HeaderComponent{
+  platformId = inject(PLATFORM_ID);
   menuOpen = false;
+  sticky = false;
+
+  ngOnInit(): void {
+    if(this.platformId == 'browser'){
+      window.addEventListener('scroll', () => {
+        this.sticky = window.scrollY > 0;
+      })
+    }
+  }
 
   toggleMenu(){
     this.menuOpen = !this.menuOpen;

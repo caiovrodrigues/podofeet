@@ -1,20 +1,22 @@
-<header class="absolute inset-x-0 top-0 z-50 container mx-auto">
-    <nav class="flex items-center justify-between p-6 lg:px-0 " aria-label="Global">
+<header class="sticky top-0 z-50 container mx-auto" [class.sticky-scroll]="sticky">
+    <nav class="flex items-center justify-between py-5 transition-all" aria-label="Global">
         <div class="flex lg:flex-1">
-            <a routerLink="" class="-m-1.5 p-1.5 flex items-center">
+            <a routerLink="" class="flex items-center">
                 <img class="h-12 md:h-16 mr-3 w-auto" src="assets/logotipo.png" alt="Logotipo podo feet">
-                <p class="text-2xl md:text-4xl bg-gradient-to-r from-fuchsia-500 to-sky-500 bg-clip-text text-transparent">PodoFeet</p>
+                <p class="text-3xl md:text-4xl bg-gradient-to-r from-fuchsia-500 to-sky-500 bg-clip-text text-transparent">
+                    Podofeet
+                </p>
             </a>
         </div>
         <div class="flex lg:hidden">
-            <button type="button" (click)="toggleMenu()" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+            <button type="button" (click)="toggleMenu()" class="inline-flex items-center justify-center rounded-md text-gray-700">
             <span class="sr-only">Abrir menu</span>
             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
             </button>
         </div>
-        <div class="hidden lg:flex lg:gap-x-12">
+        <div class="hidden menu-items lg:flex lg:gap-x-12">
             <a routerLink="" class="text-sm font-semibold leading-6 text-gray-900">Início</a>
             <a routerLink="" fragment="servicos" class="text-sm font-semibold leading-6 text-gray-900">Serviços</a>
             <a routerLink="" fragment="depoimentos" class="text-sm font-semibold leading-6 text-gray-900">Depoimentos</a>
@@ -33,7 +35,7 @@
             <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                 <div class="flex items-center justify-between">
                     <a routerLink="" class="-m-1.5 p-1.5 flex items-center">
-                        <img class="h-12 w-auto mr-3" src="assets/Design sem nome 2.webp" alt="Logotipo Podo feet">
+                        <img class="h-12 w-auto mr-3" src="assets/logotipo.png" alt="Logotipo Podo feet">
                         <p class="text-2xl md:text-3xl">PodoFeet</p>
                     </a>
                     <button type="button" (click)="toggleMenu()" class="-m-2.5 rounded-md p-2.5 text-gray-700">
